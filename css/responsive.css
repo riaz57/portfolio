@@ -1,0 +1,104 @@
+
+/*
+
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) { ... }
+
+*/
+
+@media (max-width: 1200px) {
+
+.about_content .about_item {padding-right: 22px;}
+.title_bg {font-size: 120px;}
+.section_padding {padding: 120px 0;}
+
+}
+
+@media (max-width: 992px) {
+	/*mobile-menu*/
+#nav_menu {
+    position: fixed;
+    top: 0;
+    right: -280px;
+    min-height: 100vh;
+    width: 280px;
+    background-color: #fff;
+    box-shadow: 0px 0px 13px rgba(0,0,0,0.06);
+    -webkit-transition: 0.5s ease-out;
+    transition: 0.5s ease-out;
+}
+#nav_menu ul {
+	height: 100vh;
+	width: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+#nav_menu ul li {
+    margin: 0;
+}
+#nav_menu ul li a {
+    margin: 5px 0;
+}
+#nav_menu.expand {
+	right: 0;
+}
+
+#burger {display: block;}
+.container {max-width: 960px!important}
+.section_padding {padding: 100px 0;}
+#navbar {background-color: #fff; padding: 5px 0;}
+.hero_text h1 {font-size: 70px;}
+h2 {font-size: 30px;}
+#home .slider_area {padding-left: 0;}
+#home .white_bg {display: none;}
+.title_bg {font-size: 90px;}
+footer .col-lg-3.col-md-6:nth-child(2n) .footer_single {text-align: right;}
+footer .social_links {justify-content: flex-end;}
+#about .title_bg {top: 20px;}
+
+}
+
+@media (max-width: 768px) {
+
+#navbar .logo {font-size: 27px;}
+.title_bg {display: none;}
+footer {padding: 30px 0;}
+footer .col-lg-3.col-md-6:nth-child(2n) .footer_single {text-align: left;}
+footer .social_links {justify-content: flex-start;}
+
+}
+
+@media (max-width: 576px) {
+
+#navbar .logo {font-size: 24px;}
+.section_padding {padding: 70px 0;}
+.button {padding: 10px 28px;}
+
+}
+
+@media (max-width: 480px) {
+
+body {line-height: 1.9;}
+h2 {font-size: 25px;}
+.sub_heading {letter-spacing: 2px;}
+#navbar .logo {font-size: 20px; letter-spacing: 2px}
+.section_padding {padding: 50px 0;}
+.hero_text h1 {font-size: 60px;}
+
+
+}

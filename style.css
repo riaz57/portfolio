@@ -1,0 +1,532 @@
+/*-----------------------------------------------------------------------------------
+
+    Template Name: Your template name 
+    Template URI: 
+    Description: This is html5 template
+    Author: Sharif Riaz
+    Author URI: 
+    Version: 1.0
+
+-----------------------------------------------------------------------------------*/
+
+/*----------------------------------------*/
+/*   Theme default CSS
+/*----------------------------------------*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    line-height: 2.1;
+    font-size: 14px;
+    color: #222;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    background-color: #fff;
+    letter-spacing: 1px;
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+li {
+    list-style-type: none;
+}
+a {
+    color: #333;
+    font-weight: 600;
+    text-decoration: none;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 600;
+    color: #000;
+}
+h2 {font-size: 36px;}
+h3 {font-size: 20px;}
+h4 {font-size: 18px;}
+.button {
+    padding: 15px 50px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 40px;
+    display: inline-block;
+    border: 2px solid #000;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+.button:hover {
+    background-color: #fff;
+    color: #000;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+.section_padding {
+    padding: 150px 0;
+}
+.title_bg {
+    position: absolute;
+    font-size: 140px;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 1px #000;
+    opacity: 0.1;
+    top: 0;
+    left: 0;
+    line-height: 0;
+    text-transform: uppercase;
+}
+.section_heading h2 {
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.sub_heading {
+    letter-spacing: 5px;
+}
+hr.divider {
+    margin-top: 40px;
+    background-color: #000;
+    opacity: 0.2;
+}
+.underline {
+    position: relative;
+}
+.underline::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0px;
+    height: 2px;
+    background-color: #000;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.underline:hover::after {
+    width: 100%;
+}
+.typed-cursor {
+    font-size: 18px;
+    color: #000;
+    font-weight: 700;
+}
+
+/*----------------------------------------*/
+/*  Preloader CSS
+/*----------------------------------------*/
+
+#body_half, #body_half_2 {
+    width: 100%;
+    height: 50vh;
+    position: fixed;
+    left: 0;
+    background-color: #000;
+    z-index: 999;
+    -webkit-transition: height 1s ease;
+    transition: height 1s ease;
+}
+#body_half {
+    top: 0;
+}
+#body_half_2 {
+    bottom: 0;
+}
+#body_half .loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+.ball-scale>div {
+    height: 100px;
+    width: 100px;
+}
+
+/*----------------------------------------*/
+/*  1.  Header CSS
+/*----------------------------------------*/
+
+#navbar {
+    padding: 15px 0;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+}
+#navbar .logo {
+    font-size: 30px;
+    color: #000;
+    font-weight: 900;
+    letter-spacing: 4px;
+}
+#nav_menu ul {
+    display: flex;
+    align-items: center;
+}
+#nav_menu ul li {
+    margin-right: 30px;
+}
+#nav_menu ul li:last-child {
+    margin-right: 0;
+}
+#nav_menu ul li a {
+    display: inline-block;
+    font-size: 15px;
+    color: #000;
+}
+#nav_menu ul li.active .underline::after {
+    width: 100%;
+}
+.animate {
+    background-color: #fff!important;
+    padding: 5px 0!important;
+    box-shadow: 0 0 14px rgba(0,0,0,0.165);
+}
+#burger {
+    height: 30px;
+    width: 35px;
+    cursor: pointer;
+    display: none;
+    margin-left: auto;
+    z-index: 99;
+    transition: 0.3s ease-in;
+}
+#burger span {
+    height: 3px;
+    width: 25px;
+    display: block; 
+    margin: 5px auto; 
+    background-color: #000;
+    transition: all 0.2s ease-in;
+}
+#burger.active .line1 {
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+#burger.active .line2 {
+    opacity: 0;
+}
+#burger.active .line3 {
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+#home {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+#home .white_bg {
+    width: 33%;
+    height: 100vh;
+    background-color: #fff;
+    float: left;
+}
+#home .slider_area::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+#home .slider_area {
+    width: 100%;
+    height: 100vh;
+    padding-left: 33%;
+}
+.slider_area .slide_item {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.slider_area .slide_item img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+}
+#home .hero_content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 15;
+}
+.hero_content .hero_text {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.hero_text h1 {
+    font-size: 120px;
+    line-height: 105%;
+    color: #000;
+    font-weight: 900;
+    letter-spacing: 5px;
+}
+.hero_text h1 span {
+    color: transparent;
+    -webkit-text-stroke: 1px #000;
+}
+#typed {
+    margin-top: 15px;
+}
+#typed .type_element {
+    font-weight: 600;
+    font-size: 16px;
+}
+#tohash i {
+    font-size: 18px;
+}
+#tohash {
+    position: absolute;
+    z-index: 15;
+    bottom: 30px;
+    animation: tohash 2s linear 0s infinite;
+}
+@keyframes tohash {
+    0% {bottom: 30px; opacity: 1;}
+    100% {bottom: -25px; opacity: 0;}
+}
+
+/*----------------------------------------*/
+/*  2.  About CSS
+/*----------------------------------------*/
+
+#about {
+    overflow: hidden;
+}
+.about_right {
+    position: relative;
+}
+#typed .type_element2 {
+    font-weight: 600;
+    font-size: 16px;
+}
+#about .about_content {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.about_content a.button {
+    margin-top: 10px;
+}
+.about_bottom {
+    padding-top: 100px;
+}
+.about_content .about_item {
+    width: 100%;
+    display: flex;
+    padding-right: 55px;
+}
+.about_item .about_item_left {
+    max-width: 70px;
+    width: 70px;
+    margin-right: 25px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.about_item .about_item_left i {
+    font-size: 48px;
+}
+.about_item .about_first span {
+    font-size: 48px;
+    position: relative;
+}
+.about_item .about_first i {
+    font-size: 22px;
+    position: absolute;
+    top: 10px;
+    left: 13px;
+}
+.about_left {
+    margin-bottom: 30px;
+}
+.about_item .about_item_right {
+    width: 100%;
+}
+.about_item_right h3 {
+    margin-bottom: 15px;
+}
+
+/*----------------------------------------*/
+/*  3.  Portfolio CSS
+/*----------------------------------------*/
+
+#portfolio {
+    background-color: #F8F9FA;
+    position: relative;
+}
+.portfolio_area {
+    position: relative;
+}
+.portfolio_heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.portfolio_sort {
+    z-index: 2;
+}
+.portfolio_sort ul {
+    display: flex;
+    align-items: center;
+}
+.portfolio_sort ul li a {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 15px;
+    color: #000;
+}
+.port_icon {
+    display: inline-flex;
+    flex-direction: column;
+    margin-left: 10px;
+    cursor: pointer;
+    height: 20px;
+    width: 25px;
+    justify-content: center;
+}
+.port_icon span.first {
+    width: 12px;
+    margin-left: auto;
+}
+.port_icon span.third {
+    width: 12px;
+}
+.port_icon span {
+    background-color: #000000;
+    height: 3px;
+    width: 25px;
+    display: block;
+    margin: 1.5px 0;
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+}
+.port_icon:hover span.first {
+    transform: translate(-100%, 0);
+}
+.port_icon:hover span.third {
+    transform: translate(100%, 0);
+}
+.image_gallery {
+    margin-top: 100px;
+}
+.image_gallery .gallery_item h3 {
+    margin-top: 30px;
+}
+.image_gallery .gallery_item {
+    margin-right: 50px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+}
+.image_gallery .col-lg-4.col-md-6:nth-child(3n) .gallery_item {
+    margin-right: 0!important;
+}
+.gallery_item .gallery_image {
+    overflow: hidden;
+    border-radius: 10px;
+}
+.gallery_item .source {
+    display: inline-block;
+}
+.image_gallery .gallery_item a {
+    border-radius: 10px;
+}
+.image_gallery .gallery_item img {
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+    object-fit: cover;
+}
+.image_gallery .gallery_item a:hover img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.07);
+}
+.portfolio_button {
+    text-align: center;
+}
+
+/*----------------------------------------*/
+/*  4.  Contact CSS
+/*----------------------------------------*/
+
+#contact {
+}
+.contact_area {
+    position: relative;
+}
+.contact_msg {
+    margin-top: 80px;
+}
+.contact_content form {
+    padding-top: 20px;
+    margin-bottom: 35px;
+}
+.contact_content form .input {
+    height: 44px;
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 25px;
+    border: 1px solid rgba(0,0,0,0.2);
+    outline: none;
+    border-radius: 10px;
+    box-shadow: none;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+}
+.contact_content form textarea.input {
+    height: 130px;
+    resize: none;
+}
+.contact_content form .input:focus {
+    border: 1px solid rgba(0,0,0,0.7);
+}
+.contact_content form button {
+    outline: none;
+}
+#map {
+    width: 100%;
+    height: 370px;
+    border-radius: 10px;
+}
+
+/*----------------------------------------*/
+/*  5.  Footer CSS
+/*----------------------------------------*/
+
+footer {
+    padding: 75px 0;
+    background-color: #000;
+    font-weight: 600;
+    color: #fff;
+}
+footer .underline::after {
+    background-color: #fff;
+    margin-top: 5px;
+}
+footer .underline:hover::after {
+    background-color: #fff;
+    width: 20px;
+}
+.footer_single {
+    width: 100%;
+    margin: 20px 0;
+}
+.footer_single p {
+    line-height: 110%;
+} 
+.social_links li a {
+    color: #fff;
+    margin-right: 30px;
+    font-size: 17px;
+}
