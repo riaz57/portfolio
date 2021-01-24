@@ -134,7 +134,7 @@ hr.divider {
 #body_half_2 {
     bottom: 0;
 }
-#body_half .loader {
+.loader {
     position: fixed;
     top: 50%;
     left: 50%;
